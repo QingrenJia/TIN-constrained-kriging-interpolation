@@ -21,3 +21,5 @@ Input
 - Built-in simulation  
 Output  
 - .stl format file  
+## Suggestions
+-.stl file can be loaded in 3D viewer comes with win10 or online viewer https://beta.sharecad.org/en/
