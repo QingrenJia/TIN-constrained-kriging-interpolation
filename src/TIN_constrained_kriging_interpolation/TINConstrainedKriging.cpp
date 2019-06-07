@@ -345,7 +345,7 @@ void FaultedSurfaceModel::VisualizeLayer(GeologicalLayerGeometry& geologicalLaye
 }
 
 //cross validation
-void FaultedSurfaceModel::CrossValidation()
+void FaultedSurfaceModel::CrossValidation(Interpolator::InterpolatorType interpolator)
 {
 	vector<float> stat_aver;
 	vector<float> stat_stan;
@@ -373,13 +373,8 @@ void FaultedSurfaceModel::CrossValidation()
 			sort(sub_indexs.begin(),sub_indexs.end());
 			sub_indexs_all.push_back(sub_indexs);
 		}
-		////////////////1:OrdinaryKriging
-		//calculate
-		KrigingValidation(Interpolator::OrdinaryKriging,samplePoints,sub_indexs_all,predZ);
-		WriteCVResults(_T("ok_cross"),i0,samplePoints,predZ);
-		////////////////2:ConstrainedKriging
-		/*KrigingValidation(GeologicalLayerGeometry::ConstrainedKriging,samplePoints,sub_indexs_all,predZ);
-		WriteCVResults(_T("ck_cross"),i0,samplePoints,predZ);*/
+		KrigingValidation(interpolator,samplePoints,sub_indexs_all,predZ);
+		WriteCVResults(interpolator,i0,samplePoints,predZ);
 		predZ.clear();
 	}
 	geologicalLayer.SetSamplePoints(samplePoints);
@@ -436,7 +431,7 @@ void FaultedSurfaceModel::KrigingValidation(Interpolator::InterpolatorType inter
 		}
 	}
 }
-void FaultedSurfaceModel::WriteCVResults(const wchar_t* str_method
+void FaultedSurfaceModel::WriteCVResults(Interpolator::InterpolatorType interpolator
 										 ,unsigned int i
 										 ,vector<Vector3d> samplePoints
 										 ,std::vector<pair<int,double>> predZ)
@@ -444,7 +439,16 @@ void FaultedSurfaceModel::WriteCVResults(const wchar_t* str_method
 	std::stringstream ss;
 	std::string file_name;
 	std::ofstream fileOut;
-	ss << str_method << i << ".csv";
+	if (interpolator == Interpolator::OrdinaryKriging)
+	{
+		ss << "../../exe/crossValidation/CV_OK_" << i << ".csv";
+	}else if (interpolator == Interpolator::ConstrainedKriging)
+	{
+		ss << "../../exe/crossValidation/CV_CK_" << i << ".csv";
+	}
+	else
+		return;
+	//
 	file_name = ss.str();
 	//write into file
 	fileOut.open(file_name.c_str());

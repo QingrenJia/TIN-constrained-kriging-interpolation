@@ -23,10 +23,16 @@ public:
 	//	endloop
 	//	endfacet
 	//endsolid name
-	void WriteSTLFile(const vector<Triangle> &triangles)
+	void WriteSTLFile(unsigned short method,const vector<Triangle> &triangles)
 	{
 		std::ofstream fileOut;
-		std::string file_name = "../../exe/surfacemodel.stl";
+		std::string file_name;
+		if (method == 0)
+			file_name = "../../exe/surfaceModel/surfacemodel_ok.stl";
+		else if (method == 1)
+			file_name = "../../exe/surfaceModel/surfacemodel_ck.stl";
+		else
+			return;
 		//write into file
 		fileOut.open(file_name.c_str());
 		fileOut << "solid geologicalSurface" << std::endl;

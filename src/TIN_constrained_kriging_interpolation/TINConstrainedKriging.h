@@ -101,12 +101,12 @@ public:
 	GeologicalLayerGeometry geologicalLayer;
 	void VisualizeLayer(GeologicalLayerGeometry& geologicalLayer);
 	// operating a cross validation
-	void CrossValidation();
+	void CrossValidation(Interpolator::InterpolatorType interpolator);
 	void KrigingValidation(Interpolator::InterpolatorType interpolator
 		,vector<Vector3d> samplePoints
 		,vector<vector<int>> &sub_indexs_all
 		,vector<pair<int,double>> &predZ_vec2);
-	void WriteCVResults(const wchar_t* str_method
+	void WriteCVResults(Interpolator::InterpolatorType interpolator
 		,unsigned int i
 		,vector<Vector3d> samplePoints
 		,std::vector<pair<int,double>> predZ);

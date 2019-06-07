@@ -16,6 +16,6 @@ Title of the manuscript: A triangulated irregular network constrained ordinary k
 - Platform: windows 10  
 ## Data operation  
 - Input: Built-in simulation  
-- Output: .stl format file  
+- Output: .stl format file for visualization/ .csv format file for cross validation  
 ## Suggestions
 - .stl file can be loaded in 3D viewer comes with win10 or online viewer https://beta.sharecad.org/en/
