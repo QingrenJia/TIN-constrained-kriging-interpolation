@@ -7,8 +7,7 @@ Author :  Qingren Jia
 Email   :   jqrneu@163.com/qjia6@asu.edu  
 Title of the manuscript: A triangulated irregular network constrained ordinary kriging method for three-dimensional modeling of faulted geological surfaces  
 
-## TESTBED INSTALLATION GUIDE  
-Dependencies  
+## Dependencies  
 - Standard Template Library (STL)  
 - Eigen  
 - poly2tri (https://github.com/greenm01/poly2tri)  
