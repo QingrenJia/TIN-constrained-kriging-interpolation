@@ -12,14 +12,10 @@ Title of the manuscript: A triangulated irregular network constrained ordinary k
 - Eigen  
 - poly2tri (https://github.com/greenm01/poly2tri)  
 ## Building  
-IDE  
-- Visual studio 2008 sp1  
-Platform  
-- windows 10  
+- IDE: Visual studio 2008 sp1  
+- Platform: windows 10  
 ## Data operation  
-Input  
-- Built-in simulation  
-Output  
-- .stl format file  
+- Input: Built-in simulation  
+- Output: .stl format file  
 ## Suggestions
 - .stl file can be loaded in 3D viewer comes with win10 or online viewer https://beta.sharecad.org/en/
