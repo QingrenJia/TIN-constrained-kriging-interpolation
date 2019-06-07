@@ -12,7 +12,7 @@ Title of the manuscript: A triangulated irregular network constrained ordinary k
 - Eigen  
 - poly2tri (https://github.com/greenm01/poly2tri)  
 ## Building  
-IDE:  
+IDE  
 - Visual studio 2008 sp1  
 Platform  
 - windows 10  
