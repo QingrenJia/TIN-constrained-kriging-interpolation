@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TIN_constrained_kriging_interpolation", "src\TIN_constrained_kriging_interpolation\TIN_constrained_kriging_interpolation.vcproj", "{1D6C7D24-483D-437B-B368-7B95F4A97C92}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CDT_LIB", "src\CDT_LIB\CDT_LIB.vcproj", "{CEC0F291-31FD-4548-A755-F6A25E237E32}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CDT_DLL", "src\CDT_DLL\CDT_DLL.vcproj", "{C2BA0847-BAE3-43EE-978D-BE6E6E058016}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1D6C7D24-483D-437B-B368-7B95F4A97C92}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1D6C7D24-483D-437B-B368-7B95F4A97C92}.Debug|Win32.Build.0 = Debug|Win32
+		{1D6C7D24-483D-437B-B368-7B95F4A97C92}.Release|Win32.ActiveCfg = Release|Win32
+		{1D6C7D24-483D-437B-B368-7B95F4A97C92}.Release|Win32.Build.0 = Release|Win32
+		{CEC0F291-31FD-4548-A755-F6A25E237E32}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CEC0F291-31FD-4548-A755-F6A25E237E32}.Debug|Win32.Build.0 = Debug|Win32
+		{CEC0F291-31FD-4548-A755-F6A25E237E32}.Release|Win32.ActiveCfg = Release|Win32
+		{CEC0F291-31FD-4548-A755-F6A25E237E32}.Release|Win32.Build.0 = Release|Win32
+		{C2BA0847-BAE3-43EE-978D-BE6E6E058016}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C2BA0847-BAE3-43EE-978D-BE6E6E058016}.Debug|Win32.Build.0 = Debug|Win32
+		{C2BA0847-BAE3-43EE-978D-BE6E6E058016}.Release|Win32.ActiveCfg = Release|Win32
+		{C2BA0847-BAE3-43EE-978D-BE6E6E058016}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
